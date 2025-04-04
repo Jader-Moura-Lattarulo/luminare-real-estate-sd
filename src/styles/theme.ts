@@ -1,0 +1,81 @@
+import { Theme } from '@types'
+
+export const lightTheme: Theme = {
+  appBackground: '#F5F5F5',
+  appColor: '#000',
+  appDefaultStroke: '#E0E0E0',
+  appLogo: 'luminare-logol-blue.png',
+  appSkeletonFrom: '#EEE',
+  appSkeletonTo: '#CCC',
+  buttons: {
+    alert: '#E80000',
+    alertColor: '#FFF',
+    alertHover: '#D80000',
+    disabled: '#CCC',
+    disabledColor: '#777',
+    primary: '#C8A35F',
+    primaryColor: '#F5F5F5',
+    primaryHover: '#E8C27B',
+  },
+  card: {
+    alert: '#E80000',
+    background: '#F5F5F5',
+    border: '#E0E0E0',
+    success: '#008000',
+    warning: 'F7A300',
+  },
+  textInput: {
+    active: '#F5F5F5',
+    activeColor: '#000',
+    borderColor: '#E0E0E0',
+    disabled: '#EEE',
+    disabledBorderColor: '#E0E0E0',
+    disabledColor: '#777',
+    placeholderColor: '#777',
+  },
+  typographies: {
+    error: '#FF0202',
+    subtitle: '#777',
+    success: '#008000',
+  },
+}
+
+export const darkTheme: Theme = {
+  appBackground: '#1A1F36',
+  appColor: '#F5F5F5',
+  appDefaultStroke: '#21497D',
+  appLogo: 'luminare-logo-gold',
+  appSkeletonFrom: '#060B26',
+  appSkeletonTo: '#21497D',
+  buttons: {
+    alert: '#E80000',
+    alertColor: '#FFF',
+    alertHover: '#D80000',
+    disabled: '#313649',
+    disabledColor: '#6D7D8E',
+    primary: '#C8A35F',
+    primaryColor: '#F5F5F5',
+    primaryHover: '#E8C27B',
+  },
+  card: {
+    alert: '#E80000',
+    background: '#0F1535',
+    border: '#21497D',
+    success: '#008000',
+    warning: 'F7A300',
+  },
+  textInput: {
+    active: '#0F1535',
+    activeColor: '#F5F5F5',
+    borderColor: '#21497D',
+    disabled: '#282D49',
+    disabledBorderColor: '#2E3F55',
+    disabledColor: '#58677C',
+    placeholderColor: '#89A7CE',
+  },
+  typographies: {
+    error: '#FF0202',
+    subtitle: '#89A7CE',
+    success: '#008000',
+  },
+}
