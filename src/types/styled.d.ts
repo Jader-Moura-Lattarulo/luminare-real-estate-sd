@@ -19,6 +19,13 @@ declare module 'styled-components' {
       primaryColor: string
       primaryHover: string
     }
+    card: {
+      alert: string
+      background: string
+      border: string
+      success: string
+      warning: string
+    }
     textInput: {
       active: string
       activeColor: string
