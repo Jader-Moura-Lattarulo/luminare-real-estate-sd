@@ -1,5 +1,12 @@
+import { Header } from '@/components'
+
 function Leads() {
-  return <>LEADS</>
+  return (
+    <>
+      <Header />
+      LEADS
+    </>
+  )
 }
 
 export default Leads

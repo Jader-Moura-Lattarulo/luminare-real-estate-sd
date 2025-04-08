@@ -5,6 +5,7 @@ export const lightTheme: Theme = {
   appColor: '#000',
   appDefaultStroke: '#E0E0E0',
   appLogo: 'luminare-logo-blue.png',
+  appLogoTxt: 'luminare-logo-txt-blue.png',
   appSkeletonFrom: '#EEE',
   appSkeletonTo: '#CCC',
   buttons: {
@@ -45,6 +46,7 @@ export const darkTheme: Theme = {
   appColor: '#F5F5F5',
   appDefaultStroke: '#21497D',
   appLogo: 'luminare-logo-gold.png',
+  appLogoTxt: 'luminare-logo-txt-gold.png',
   appSkeletonFrom: '#060B26',
   appSkeletonTo: '#21497D',
   buttons: {

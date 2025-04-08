@@ -4,7 +4,11 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     appBackground: string
     appColor: string
+    appDefaultStroke: string
     appLogo: string
+    appLogoTxt: string
+    appSkeletonFrom: string
+    appSkeletonTo: string
     buttons: {
       alert: string
       alertColor: string
