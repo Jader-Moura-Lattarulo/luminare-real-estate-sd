@@ -28,6 +28,13 @@ ChartJS.register(
 function CustomChart(props: CustomChartProps) {
   const { data, labels, type } = props
   const theme = useTheme()
+
+  const currencyConverter = (value: number) =>
+    value.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })
+
   const options = {
     responsive: true,
     scaleShowVerticalLines: false,
@@ -52,6 +59,9 @@ function CustomChart(props: CustomChartProps) {
         },
         ticks: {
           color: theme.typographies.subtitle,
+          callback: function (value: string | number) {
+            return currencyConverter(Number(value))
+          },
         },
       },
     },
@@ -59,8 +69,16 @@ function CustomChart(props: CustomChartProps) {
       legend: {
         display: false,
       },
+      tooltip: {
+        callbacks: {
+          label: function (context: any) {
+            return currencyConverter(context.raw)
+          },
+        },
+      },
     },
   }
+
   const chartData = {
     labels,
     datasets: [
@@ -71,11 +89,13 @@ function CustomChart(props: CustomChartProps) {
       },
     ],
   }
+
   return type === 'bar' ? (
     <Bar options={options} data={chartData} />
   ) : (
     <Line options={options} data={chartData} />
   )
 }
+
 
 export default CustomChart

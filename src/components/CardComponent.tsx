@@ -14,7 +14,7 @@ export const CardComponent = styled.div`
     border-color: ${(props) => props.theme.card.alert};
   }
 
-  &.succes {
+  &.success {
     background-color: ${(props) => props.theme.card.success};
     border-color: ${(props) => props.theme.card.success};
   }

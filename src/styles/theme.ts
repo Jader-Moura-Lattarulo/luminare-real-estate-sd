@@ -22,7 +22,7 @@ export const lightTheme: Theme = {
     alert: '#B00020',
     background: '#FFFFFF',
     border: '#DADCE0',
-    success: '#008000',
+    success: '#1E8E3E',
     warning: '#F7A300',
   },
   textInput: {
@@ -37,7 +37,7 @@ export const lightTheme: Theme = {
   typographies: {
     error: '#FF0202',
     subtitle: '#5C6370',
-    success: '#008000',
+    success: '#1E8E3E',
   },
 }
 
@@ -63,7 +63,7 @@ export const darkTheme: Theme = {
     alert: '#B00020',
     background: '#0F1535',
     border: '#2A3B5C',
-    success: '#008000',
+    success: '#1E8E3E',
     warning: '#F7A300',
   },
   textInput: {
@@ -78,6 +78,6 @@ export const darkTheme: Theme = {
   typographies: {
     error: '#FF0202',
     subtitle: '#A9B8CC',
-    success: '#008000',
+    success: '#1E8E3E',
   },
 }
