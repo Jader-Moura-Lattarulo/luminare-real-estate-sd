@@ -9,6 +9,10 @@ export const useFormValidation = (inputs: InputProps[]) => {
 
   useEffect(() => {
     const allFieldsValid = inputs.every((input, index) => {
+    const value = formValues[index]
+      if (input.required && !value) {
+        return false
+      }
       if (input.type === 'email') {
         return /^(?!.*\.\.)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
           String(formValues[index])
