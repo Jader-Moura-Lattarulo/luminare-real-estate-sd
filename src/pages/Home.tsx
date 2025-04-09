@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 //COMPONENTS
 import {
   AvatarList,
@@ -54,7 +55,6 @@ function Home() {
     loading: salesYearLoading,
     error: salesYearError,
   } = useGet<CustomChartProps>('sales/year')
-
 
   return (
     <>
@@ -123,11 +123,17 @@ function Home() {
                 >
                   {!highlightsLoading && highlightsData && (
                     <>
-                      <StyledH2 className="mb-1">Leads contactados</StyledH2>
-                      <StyledH3 className="mb-1" fontSize={40} lineHeight={40}>
-                        {highlightsData[2].value}
-                      </StyledH3>
-                      <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
+                      <Link to="/leads">
+                        <StyledH2 className="mb-1">Leads contactados</StyledH2>
+                        <StyledH3
+                          className="mb-1"
+                          fontSize={40}
+                          lineHeight={40}
+                        >
+                          {highlightsData[2].value}
+                        </StyledH3>
+                        <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
+                      </Link>
                     </>
                   )}
                 </CardComponent>
