@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 //COMPONENTS
 import { Box, Container, Grid } from '@mui/material'
