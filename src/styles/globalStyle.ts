@@ -13,9 +13,10 @@ export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
     }
 
     figure {
-        margin: 0 30%;
+        margin: 0;
         padding: 0;
     }
+
 
     h1, h2, p, ul, li {
         margin: 0;

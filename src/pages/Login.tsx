@@ -11,6 +11,7 @@ import {
   Logo,
   StyledH1,
   StyledP,
+  SwitchAuthLink,
 } from '@/components'
 
 //HOOKS
@@ -22,8 +23,15 @@ import { jwtExpirationDateConverter, pxToRem } from '@/utils'
 //TYPES
 import { DecodedJWT, MessageProps, LoginData, LoginPostData } from '@/types'
 
+//REDUX
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux'
+
 function Login() {
   const navigate = useNavigate()
+  const { email, message } = useSelector(
+    (state: RootState) => state.createProfile
+  )
   const inputs = [
     { type: 'email', placeholder: 'Email' },
     { type: 'password', placeholder: 'Senha' },
@@ -34,7 +42,7 @@ function Login() {
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
 
   const handleMessage = (): MessageProps => {
-    if (!error) return { msg: '', type: 'success' }
+    if (!error) return { msg: message ?? '', type: 'success' }
     switch (error) {
       case 401:
         return {
@@ -68,6 +76,12 @@ function Login() {
     if (Cookies.get('Authorization')) navigate('home')
   }, [data, navigate])
 
+  useEffect(() => {
+    if (email) {
+      handleChange(0, email)
+    }
+  }, [email])
+
   return (
     <>
       <Box>
@@ -84,7 +98,14 @@ function Login() {
             }}
           >
             <Container maxWidth="sm">
-              <Box sx={{ marginBottom: pxToRem(24) }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  marginBottom: pxToRem(24),
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
                 <Logo height={180} width={220} />
               </Box>
               <Box sx={{ marginBottom: pxToRem(24) }}>
@@ -109,6 +130,11 @@ function Login() {
                   },
                 ]}
                 message={handleMessage()}
+              />
+              <SwitchAuthLink
+                to="/registration"
+                message="Ainda não tem uma conta?"
+                linkText="Cadastre-se aqui"
               />
             </Container>
             <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>
