@@ -29,8 +29,6 @@ A responsive and modern real estate web application built with React, TypeScript
 
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ```bash
 luminare-real-estate-sd/
 ├── public/                # Static assets
