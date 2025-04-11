@@ -5,10 +5,12 @@ import Cookies from 'js-cookie'
 //COMPONENTS
 import {
   CardComponent,
+  Footer,
   FormComponent,
   Header,
-  StyledH2,
+  LayoutWrapper,
   StyledButton,
+  StyledH2,
 } from '@/components'
 
 //HOOKS
@@ -122,7 +124,7 @@ function Profile() {
   }, [profileUpdateData, profileUpdateError])
 
   return (
-    <>
+    <LayoutWrapper>
       <Header />
       <Container className="mb-2" maxWidth="lg">
         <Grid container spacing={4}>
@@ -192,7 +194,8 @@ function Profile() {
           </Grid>
         </Grid>
       </Container>
-    </>
+      <Footer />
+    </LayoutWrapper>
   )
 }
 

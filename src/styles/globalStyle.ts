@@ -3,11 +3,15 @@ import { DefaultTheme } from 'styled-components'
 import { pxToRem } from '@/utils'
 
 export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
-    body, html {
+    html, body, #root {
+        height: 100%;
+        margin: 0;
+        padding: 0%;
+    }
+    
+    body {
         background: ${(props) => props.theme.appBackground};
         color: ${(props) => props.theme.appColor};
-        margin: 0;
-        padding: 0;
         font-family: "Lato", sans-serif;
         font-weight: 550;
     }

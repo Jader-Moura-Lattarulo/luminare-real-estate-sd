@@ -5,7 +5,9 @@ import {
   CardComponent,
   CustomChart,
   CustomTable,
+  Footer,
   Header,
+  LayoutWrapper,
   StyledH2,
   StyledH3,
   StyledSpan,
@@ -57,7 +59,7 @@ function Home() {
   } = useGet<CustomChartProps>('sales/year')
 
   return (
-    <>
+    <LayoutWrapper>
       <Header />
       <Container className="mb-2" maxWidth="lg">
         <Grid container spacing={4}>
@@ -250,7 +252,8 @@ function Home() {
           </Grid>
         </Grid>
       </Container>
-    </>
+      <Footer />
+    </LayoutWrapper>
   )
 }
 

@@ -3,10 +3,12 @@ import { ChangeEvent, useState, useEffect } from 'react'
 import {
   CardComponent,
   CustomTable,
+  Footer,
   FormComponent,
   Header,
-  StyledH2,
+  LayoutWrapper,
   StyledButton,
+  StyledH2,
   StyledP,
   StyledSpan,
 } from '@/components'
@@ -103,7 +105,7 @@ function Leads() {
   }
 
   return (
-    <>
+    <LayoutWrapper>
       <Header />
       <Container className="mb-2" maxWidth="lg">
         <Grid container spacing={4}>
@@ -167,7 +169,8 @@ function Leads() {
           </Grid>
         </Grid>
       </Container>
-    </>
+      <Footer />
+    </LayoutWrapper>
   )
 }
 

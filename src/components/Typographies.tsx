@@ -55,3 +55,23 @@ export const StyledUl = styled.ul<TypographiesProps>`
     margin-left: ${pxToRem(15)};
   }
 `
+export const FooterUl = styled.ul<TypographiesProps>`
+  display: flex;
+  gap: ${pxToRem(16)};
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: ${(props) => props.color || 'inherit'};
+  font-family: 'Lato', sans-serif;
+  font-size: ${(props) => pxToRem(props.fontSize || 16)};
+  font-weight: ${(props) => props.fontWeight || 400};
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  li a {
+    color: ${(props) => props.color || 'inherit'};
+  }
+`
