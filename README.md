@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# 🏡 Luminare Real Estate SD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern real estate web application built with React, TypeScript, and Vite. This project offers a clean UI, authentication flows, reusable components, and a global layout, providing a solid foundation for real estate platforms or similar projects.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [luminare-real-estate-sd.vercel.app](https://luminare-real-estate-sd.vercel.app)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔐 Authentication pages (Login and Registration) with front-end validation
+- 🎨 Styled-components for modular and maintainable styling
+- 🧱 Reusable components like `SwitchAuthLink` and `LayoutWrapper`
+- 📄 Global layout with a persistent footer across all pages
+- 🌐 Social media icons integrated using `react-icons`
+- 📱 Responsive design optimized for various devices
+- 🧰 TypeScript for type safety and improved developer experience
+- ⚡ Vite for fast development and build processes
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **Framework**: [React](https://reactjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [styled-components](https://styled-components.com/)
+- **Routing**: [React Router DOM](https://reactrouter.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+## 📂 Project Structure
+
+```bash
+luminare-real-estate-sd/
+├── public/                # Static assets
+├── src/
+│   ├── components/        # Reusable React components
+│   ├── pages/             # Page-level components (Login, Registration, Leads, etc.)
+│   ├── styles/            # Global and component-level styles
+│   ├── types/             # TypeScript type definitions
+│   └── utils/             # Utility functions (e.g., pxToRem)
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To run this project locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# 1. Clone the repository
+git clone https://github.com/Jader-Moura-Lattarulo/luminare-real-estate-sd.git
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# 2. Navigate into the project directory
+cd luminare-real-estate-sd
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
 ```

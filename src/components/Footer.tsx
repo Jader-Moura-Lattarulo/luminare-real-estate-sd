@@ -3,16 +3,17 @@ import { JmdevLogo, StyledH1, FooterUl } from '@/components'
 import { Box, Container } from '@mui/material'
 import { pxToRem } from '@/utils'
 import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
+import { FooterProps } from '@/types'
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer<FooterProps>`
   background-color: ${(props) => props.theme.appDefaultStroke};
   border-bottom: ${pxToRem(1)} solid ${(props) => props.theme.appDefaultStroke};
-  margin-top: ${pxToRem(37)};
   width: 100%;
+  margin-top: ${(props) => pxToRem(props.marginTop ?? 0)}
 `
-function Footer() {
+function Footer({marginTop}: FooterProps) {
   return (
-    <StyledFooter>
+    <StyledFooter marginTop={marginTop}>
       <Container maxWidth="lg">
         <Box
           sx={{

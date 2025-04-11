@@ -169,7 +169,7 @@ function Leads() {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
+      <Footer marginTop={175}/>
     </LayoutWrapper>
   )
 }
