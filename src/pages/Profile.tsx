@@ -194,7 +194,7 @@ function Profile() {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
+      <Footer marginTop={112} />
     </LayoutWrapper>
   )
 }
